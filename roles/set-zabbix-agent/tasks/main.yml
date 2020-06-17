@@ -40,3 +40,8 @@
   systemd:
     name: zabbix-agent
     state: started
+
+- name: start zabbix-proxy
+  systemd:
+    name: zabbix-proxy
+    state: restarted
