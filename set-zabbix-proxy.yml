@@ -1,0 +1,5 @@
+- name: set zabbix-proxy
+  hosts: test
+  become: yes
+  roles:
+    - set-zabbix-proxy

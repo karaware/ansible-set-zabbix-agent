@@ -1,5 +1,4 @@
 - name: set zabbix-agent
   hosts: test
-  become: yes
   roles:
-    - set-zabbix-agent
+    - install-zabbix-agent

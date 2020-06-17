@@ -1,0 +1,14 @@
+- name: copy rpm file
+  copy:
+    src: zabbix-agent-4.0.14-1.el7.x86_64.rpm
+    dest: /tmp/
+
+- name: remove old zabbix-agent
+  yum:
+    name: zabbix-agent
+    state: removed
+
+- name: install new zabbix-agent
+  yum:
+    name: /tmp/zabbix-agent-4.0.14-1.el7.x86_64.rpm
+    state: present
