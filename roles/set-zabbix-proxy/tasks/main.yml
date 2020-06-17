@@ -1,6 +1,6 @@
 - name: copy zabbix-agent.conf
   vars:
-    now_date: "{{ lookup('pipe','date +%Y%m%d%H%M') }}"
+    now_date: "{{ lookup('pipe','date +%Y%m%d') }}"
   copy:
     src: /etc/zabbix/zabbix_agentd.conf
     dest: /etc/zabbix/zabbix_agentd.conf_{{ now_date }}
